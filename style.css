@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    border-bottom: solid 3px white;
+    border-bottom: solid 1px white;
 }
 .box p{
     text-align: justify;
