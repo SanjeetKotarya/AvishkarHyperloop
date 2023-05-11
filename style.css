@@ -1,0 +1,99 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+}
+.slide, .end{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: solid 3px white;
+}
+.box p{
+    text-align: justify;
+    font-size: 2.6vw;
+    padding: 70px;
+    font-family: Orbitron;
+}
+
+.end p{
+    text-align: justify;
+    font-size: 4vw;
+    padding: 50px ;
+    color: white;
+    font-family: Orbitron;
+    text-shadow: 4px 4px 6px black;
+
+}
+.slide .box{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+video{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide h1{
+    font-family: Orbitron;
+    padding: 0  50px 50px ;
+    text-align: center;
+}
+
+h1 {
+    max-width: 40ch;
+    text-align: center;
+    transform: scale(1.2);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    text-shadow: 4px 4px 8px black;
+  }
+  
+  @media only screen and (min-width: 800px) {
+    @keyframes scale {
+        100% {
+          transform: scale(2);
+        }
+      }
+
+      .slide p{
+        font-size: 2vw;
+    }
+  }
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
